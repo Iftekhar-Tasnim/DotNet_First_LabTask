@@ -1,0 +1,26 @@
+﻿@model Test_DB.bd.Product
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Price</dt>
+        <dd>@Model.Price</dd>
+
+        <dt>Quantity</dt>
+        <dd>@Model.QTy</dd>
+
+        <dt>Description</dt>
+        <dd>@Model.Description</dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
